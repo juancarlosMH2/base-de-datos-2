@@ -1,0 +1,234 @@
+[{
+  "_id": {
+    "$oid": "6847456752b8d28828046993"
+  },
+  "nombre": "$eq",
+  "tipo": "comparación",
+  "descripcion": "Igual a (Equal). Devuelve true si los valores son iguales.",
+  "sintaxis": "{ campo: { $eq: valor } }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d28828046994"
+  },
+  "nombre": "$ne",
+  "tipo": "comparación",
+  "descripcion": "No igual a (Not Equal). Devuelve true si los valores no son iguales.",
+  "sintaxis": "{ campo: { $ne: valor } }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d28828046995"
+  },
+  "nombre": "$gt",
+  "tipo": "comparación",
+  "descripcion": "Mayor que (Greater Than). Devuelve true si el valor del campo es mayor que el valor dado.",
+  "sintaxis": "{ campo: { $gt: valor } }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d28828046996"
+  },
+  "nombre": "$gte",
+  "tipo": "comparación",
+  "descripcion": "Mayor o igual que (Greater Than or Equal).",
+  "sintaxis": "{ campo: { $gte: valor } }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d28828046997"
+  },
+  "nombre": "$lt",
+  "tipo": "comparación",
+  "descripcion": "Menor que (Less Than).",
+  "sintaxis": "{ campo: { $lt: valor } }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d28828046998"
+  },
+  "nombre": "$lte",
+  "tipo": "comparación",
+  "descripcion": "Menor o igual que (Less Than or Equal).",
+  "sintaxis": "{ campo: { $lte: valor } }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d28828046999"
+  },
+  "nombre": "$in",
+  "tipo": "comparación",
+  "descripcion": "Devuelve true si el valor del campo coincide con alguno de los valores especificados en el arreglo.",
+  "sintaxis": "{ campo: { $in: [valor1, valor2, ...] } }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d2882804699a"
+  },
+  "nombre": "$nin",
+  "tipo": "comparación",
+  "descripcion": "Devuelve true si el valor del campo no coincide con ninguno de los valores en el arreglo.",
+  "sintaxis": "{ campo: { $nin: [valor1, valor2, ...] } }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d2882804699b"
+  },
+  "nombre": "$and",
+  "tipo": "lógico",
+  "descripcion": "Devuelve true si todas las condiciones son verdaderas.",
+  "sintaxis": "{ $and: [ { <expresión1> }, { <expresión2> } ] }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d2882804699c"
+  },
+  "nombre": "$or",
+  "tipo": "lógico",
+  "descripcion": "Devuelve true si al menos una condición es verdadera.",
+  "sintaxis": "{ $or: [ { <expresión1> }, { <expresión2> } ] }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d2882804699d"
+  },
+  "nombre": "$not",
+  "tipo": "lógico",
+  "descripcion": "Invierte el resultado de una expresión.",
+  "sintaxis": "{ campo: { $not: { <operador>: valor } } }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d2882804699e"
+  },
+  "nombre": "$nor",
+  "tipo": "lógico",
+  "descripcion": "Devuelve true si ninguna de las expresiones es verdadera.",
+  "sintaxis": "{ $nor: [ { <expresión1> }, { <expresión2> } ] }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d2882804699f"
+  },
+  "nombre": "$and + $gt + $lt",
+  "tipo": "combinación",
+  "descripcion": "Evalúa si un campo está entre dos valores usando $and con $gt y $lt.",
+  "sintaxis": "{ $and: [ { campo: { $gt: valor1 } }, { campo: { $lt: valor2 } } ] }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d288280469a0"
+  },
+  "nombre": "$or + $eq + $in",
+  "tipo": "combinación",
+  "descripcion": "Evalúa si un campo es igual a un valor específico o pertenece a un conjunto de valores.",
+  "sintaxis": "{ $or: [ { campo: { $eq: valor } }, { campo: { $in: [valor1, valor2] } } ] }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d288280469a1"
+  },
+  "nombre": "$and + $gte + $lte",
+  "tipo": "combinación",
+  "descripcion": "Evalúa si un campo es mayor o igual a un valor y menor o igual a otro.",
+  "sintaxis": "{ $and: [ { campo: { $gte: valor1 } }, { campo: { $lte: valor2 } } ] }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d288280469a2"
+  },
+  "nombre": "$or + $ne + $nin",
+  "tipo": "combinación",
+  "descripcion": "Evalúa si un campo es diferente de un valor o no está en una lista de valores.",
+  "sintaxis": "{ $or: [ { campo: { $ne: valor } }, { campo: { $nin: [valor1, valor2] } } ] }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d288280469a3"
+  },
+  "nombre": "$not + $lt",
+  "tipo": "combinación",
+  "descripcion": "Evalúa si un campo NO es menor que cierto valor.",
+  "sintaxis": "{ campo: { $not: { $lt: valor } } }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d288280469a4"
+  },
+  "nombre": "$nor + $eq + $in",
+  "tipo": "combinación",
+  "descripcion": "Evalúa que un campo NO sea igual a un valor NI esté en una lista.",
+  "sintaxis": "{ $nor: [ { campo: { $eq: valor } }, { campo: { $in: [valor1, valor2] } } ] }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d288280469a5"
+  },
+  "nombre": "$and + $eq + $ne",
+  "tipo": "combinación",
+  "descripcion": "Evalúa si un campo es igual a un valor y otro campo es diferente de otro valor.",
+  "sintaxis": "{ $and: [ { campo1: { $eq: valor1 } }, { campo2: { $ne: valor2 } } ] }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d288280469a6"
+  },
+  "nombre": "$or + $gt + $lte",
+  "tipo": "combinación",
+  "descripcion": "Evalúa si un campo es mayor que un valor o menor o igual que otro.",
+  "sintaxis": "{ $or: [ { campo: { $gt: valor1 } }, { campo: { $lte: valor2 } } ] }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d288280469a7"
+  },
+  "nombre": "$and + $in + $nin",
+  "tipo": "combinación",
+  "descripcion": "Evalúa si un campo está en una lista y otro campo no está en otra lista.",
+  "sintaxis": "{ $and: [ { campo1: { $in: [valor1, valor2] } }, { campo2: { $nin: [valor3, valor4] } } ] }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d288280469a8"
+  },
+  "nombre": "$nor + $gt + $lt",
+  "tipo": "combinación",
+  "descripcion": "Evalúa que un campo no sea ni mayor que un valor ni menor que otro (fuera del rango).",
+  "sintaxis": "{ $nor: [ { campo: { $gt: valor1 } }, { campo: { $lt: valor2 } } ] }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d288280469a9"
+  },
+  "nombre": "$and + $not + $in",
+  "tipo": "combinación",
+  "descripcion": "Evalúa si un campo no está en una lista y además otra condición se cumple.",
+  "sintaxis": "{ $and: [ { campo1: { $not: { $in: [valor1, valor2] } } }, { campo2: { $eq: valor3 } } ] }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d288280469aa"
+  },
+  "nombre": "$or + $and",
+  "tipo": "combinación",
+  "descripcion": "Usa $and dentro de un $or para permitir múltiples condiciones anidadas.",
+  "sintaxis": "{ $or: [ { $and: [ { campo1: { $gt: valor1 } }, { campo2: { $lt: valor2 } } ] }, { campo3: { $eq: valor3 } } ] }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d288280469ab"
+  },
+  "nombre": "$and + $or + $eq",
+  "tipo": "combinación",
+  "descripcion": "Evalúa que se cumplan varias combinaciones de igualdad con $or y luego se use dentro de un $and.",
+  "sintaxis": "{ $and: [ { campo1: valor1 }, { $or: [ { campo2: valor2 }, { campo3: valor3 } ] } ] }"
+},
+{
+  "_id": {
+    "$oid": "6847456752b8d288280469ac"
+  },
+  "nombre": "$nor + $lte + $ne",
+  "tipo": "combinación",
+  "descripcion": "Evalúa que un campo no sea menor o igual a un valor ni diferente a otro valor.",
+  "sintaxis": "{ $nor: [ { campo: { $lte: valor1 } }, { campo: { $ne: valor2 } } ] }"
+}]
